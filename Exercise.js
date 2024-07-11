@@ -104,28 +104,39 @@
 // Ejercicio 8
 let numeroIncognita = 7
 let numeroIngresado = (prompt("Ingrese su numero"))
-let intentoDos = (prompt("Segundo intento"))
-let intentoTres = (prompt("Tercer intento"))
 
 
-if (numeroIngresado > numeroIncognita) {
-    console.log("el numero ingresado es mayor, vuelve a intentarlo");
-    let intentoDos = (prompt("Segundo intento"))
-} else if (numeroIngresado < numeroIncognita) {
-    console.log("el numero ingresado es menor, vuelve a intentarlo");
-    let intentoDos = (prompt("Segundo intento"))
-    let intentoTres = (prompt("Tercer intento"))
-}else if (intentoDos > numeroIncognita) {
-    console.log("el numero ingresado es mayor, vuelve a intentarlo");
-    let intentoTres = (prompt("Tercer intento"))
-}else if (intentoDos < numeroIncognita) {
-    console.log("el numero ingresado es menor, vuelve a intentarlo");
-}else if (intentoTres < numeroIncognita) {
-    console.log("ePerdiste, vuelve a jugar");
-    
-}else {
-    console.log("Perdiste, vuelve a jugar");
+
+if (numeroIngresado === numeroIncognita) {
+    console.log("Ganaste");
+
+} else {
+    if(numeroIngresado>numeroIncognita){
+        alert("Tu numero es mayor, vuelve a intentarlo")
+    }else{
+        alert("Tu numero es menor, vuelve a intentarlo")
+    }
+
+    numeroIngresado = (prompt("Segundo intento"))
+    if(numeroIngresado>numeroIncognita){
+        alert("Tu numero es mayor, vuelve a intentarlo")
+    }else{
+        alert("Tu numero es menor, vuelve a intentarlo")
+    }
+    numeroIngresado = (prompt("Tercer intento"))
+    if(numeroIngresado==numeroIncognita){
+        alert("Ganaste")
+    }else{
+        alert("Lo sentimos, vuelve a jugar")
+    }
+
 }
+
+
+
+
+
+
 // Ejercicio 9
 // let edad = (prompt("Ingresa tu edad"))
 
